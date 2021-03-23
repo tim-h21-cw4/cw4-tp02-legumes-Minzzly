@@ -1,0 +1,76 @@
+/* ==========================================================================
+   footer / components
+   ========================================================================== */
+
+.footer {
+    background: var(--color-black);
+    color: var(--color-white);
+    padding: 50px 0;
+    margin-top: 100px;
+
+    .wrapper-small {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media screen and (min-width: $breakpoint-md) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    .wrapper-small + .wrapper-small {
+        padding-top: var(--spacing-lg);
+    }
+}
+.footer__brand {
+    padding-bottom: var(--spacing-lg);
+    img {
+        display: block;
+    }
+    display: flex;
+    @media screen and (min-width: $breakpoint-md) {
+    }
+}
+.socials {
+    padding-top: var(--spacing-sm);
+    ul {
+        display: flex;
+    }
+
+    a {
+        color: inherit;
+        @include fluid-type(20px, 34px);
+        padding: 10px;
+
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+        padding-top: 0;
+    }
+}
+.nav-secondary {
+    padding-top: var(--spacing-xs);
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    a {
+        color: inherit;
+        display: block;
+        padding: 10px;
+
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+        padding-top: 0;
+    }
+}

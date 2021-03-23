@@ -1,0 +1,53 @@
+/* ==========================================================================
+   button / component
+   ========================================================================== */
+
+.button {
+    outline: none;
+    border: 2px solid var(--color-primary);
+    background: var(--color-primary);
+    padding: 10px 20px;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: all 0.4s $ease-out-expo;
+
+    &:hover {
+        background: var(--color-white);
+        color: var(--color-primary);
+    }
+}
+
+.button-chevron {
+    outline: none;
+    border: 3px var(--color-black) solid;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: transparent;
+    cursor: pointer;
+
+    img {
+        transform: translateX(1px);
+        transition: all 0.5s $ease-out-expo;
+    }
+    &.button-chevron-reverse {
+        img {
+            transform: scaleX(-1) translateX(2px);
+        }
+        &:hover {
+            img {
+                transform: scaleX(-1) translateX(4px);
+            }
+        }
+    }
+
+    &:hover {
+        img {
+            transform: translateX(3px);
+        }
+    }
+}

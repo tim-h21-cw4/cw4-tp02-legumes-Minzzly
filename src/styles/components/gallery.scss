@@ -1,0 +1,75 @@
+/* ==========================================================================
+   gallery / component
+   ========================================================================== */
+.gallery {
+    overflow: hidden;
+    .swiper-container {
+        // margin-top: var(--spacing-sm);
+        overflow: visible;
+    }
+    .swiper-wrapper {
+        margin-top: var(--spacing-sm);
+    }
+    .swiper-options {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: calc(75% + 20px);
+        margin-top: var(--spacing-sm);
+
+        .button-chevron + .button-chevron {
+            margin-left: 10px;
+        }
+    }
+
+    .swiper-slide {
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        position: relative;
+
+        img {
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            max-height: 80%;
+        }
+
+        &.swiper-slide-secondary {
+            background: var(--color-bg-secondary);
+        }
+        &.swiper-slide-tertiary {
+            background: var(--color-bg-tertiary);
+            color: var(--color-white);
+        }
+        &.swiper-slide-quaternary {
+            background: var(--color-bg-quaternary);
+            color: var(--color-white);
+        }
+        &.swiper-slide-quinary {
+            background: var(--color-bg-quinary);
+        }
+    }
+    .swiper-slide-content {
+        padding: var(--spacing-md);
+    }
+
+    .swiper-button-disabled {
+        opacity: 0.3;
+        cursor: defaut;
+    }
+
+    .swiper-pagination {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .swiper-pagination-bullet {
+        background: var(--color-bg-quaternary);
+        opacity: 0.6;
+        border-radius: 0;
+        transform: rotate(45deg);
+    }
+    .swiper-pagination-bullet-active {
+        background: var(--color-bg-quinary);
+        opacity: 1;
+    }
+}

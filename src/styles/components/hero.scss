@@ -1,0 +1,36 @@
+/* ==========================================================================
+   hero / components
+   ========================================================================== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    h1 {
+        text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.hero__media {
+    @include cover();
+    z-index: 1;
+    img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.hero__content {
+    color: var(--color-white);
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    z-index: 2;
+    min-height: 30vh;
+    transition: min-height 0.3s ease-out;
+    padding: var(--spacing-md) 0;
+
+    @media screen and (min-width: $breakpoint-md) {
+        min-height: 50vh;
+    }
+}

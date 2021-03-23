@@ -1,0 +1,146 @@
+/* ==========================================================================
+   header / components
+   ========================================================================== */
+header {
+    background: var(--color-white);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    transform: translateY(0);
+    transition: all 0.4s $ease-out-quad;
+    top: 0;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.header__toggle {
+    --bar-width: 30px;
+    --bar-height: 5px;
+    --bar-spacer: 3px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    padding: 0;
+    position: relative;
+    width: var(--bar-width);
+    height: var(--bar-width);
+    z-index: 10;
+
+    span {
+        background: var(--color-primary);
+        border-radius: 3px;
+        display: block;
+        height: var(--bar-height);
+        width: var(--bar-width);
+        position: absolute;
+        top: calc(50% - var(--bar-height) / 2);
+        left: calc(50% - var(--bar-width) / 2);
+
+        transition: 0.3s all;
+
+        &:nth-child(1) {
+            top: calc(
+                50% - var(--bar-height) / 2 - var(--bar-height) -
+                    var(--bar-spacer)
+            );
+        }
+        &:nth-child(3) {
+            top: calc(
+                50% - var(--bar-height) / 2 + var(--bar-height) +
+                    var(--bar-spacer)
+            );
+        }
+    }
+
+    .nav-is-active & {
+        span {
+            top: calc(50% - var(--bar-height) / 2);
+            &:nth-child(1) {
+                transform: rotate(45deg);
+            }
+            &:nth-child(2) {
+                transform: scaleX(0);
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    @media screen and (min-width: $breakpoint-md) {
+        display: none;
+    }
+}
+
+/*
+   nav-primary
+   ========================================================================== */
+.nav-primary {
+    background-color: var(--color-bg-secondary);
+    position: absolute;
+    overflow-y: auto;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 1;
+
+    ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        opacity: 0;
+
+        a {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+        background: none;
+        padding-top: 0;
+        position: relative;
+        height: auto;
+        width: auto;
+        transform: translateX(0%);
+        ul {
+            flex-direction: row;
+            opacity: 1;
+            transform: none;
+        }
+        a {
+            color: var(--color-black);
+            padding: 10px;
+
+            &:hover {
+                color: var(--color-primary);
+            }
+        }
+    }
+}
+
+.nav-primary__item {
+    @include fluid-type(32px, 60px);
+    // color: var(--color-white);
+    text-transform: uppercase;
+    padding: 0 20px;
+    position: relative;
+
+    @media screen and (min-width: $breakpoint-md) {
+        font-size: inherit;
+        text-transform: none;
+        font-weight: 700;
+    }
+}

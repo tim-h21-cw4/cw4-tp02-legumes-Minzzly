@@ -1,0 +1,45 @@
+/* ==========================================================================
+   wall / components
+   ========================================================================== */
+.wall {
+    .wrapper {
+        display: grid;
+        gap: var(--spacing-sm);
+        margin-top: var(--spacing-md);
+        grid-template-columns: repeat(2, 1fr);
+
+        @media screen and (min-width: $breakpoint-md) {
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-md);
+        }
+
+        .card {
+            position: relative;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            img {
+                position: absolute;
+                bottom: -50px;
+                right: -50px;
+                max-height: 80%;
+                max-width: 100%;
+            }
+        }
+        .card--long {
+            aspect-ratio: unset;
+            // aspect-ratio: 1 / 2;
+
+            @media screen and (min-width: $breakpoint-md) {
+                grid-row: span 2;
+            }
+        }
+        .card--large {
+            aspect-ratio: unset;
+            // aspect-ratio: 1 / 2;
+
+            @media screen and (min-width: $breakpoint-md) {
+                grid-column: span 2;
+            }
+        }
+    }
+}

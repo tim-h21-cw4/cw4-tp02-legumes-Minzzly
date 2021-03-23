@@ -1,0 +1,30 @@
+/* ==========================================================================
+   news / components
+   ========================================================================== */
+.news {
+    .wrapper-small {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr;
+
+        @media screen and (min-width: $breakpoint-md) {
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    .card-news:not(.card-news--small) {
+        @media screen and (min-width: $breakpoint-md) {
+            grid-row: span 2;
+        }
+    }
+    .card-news--small {
+        @media screen and (min-width: $breakpoint-md) {
+            grid-row: span 1;
+        }
+    }
+
+    .options {
+        margin-top: var(--spacing-lg);
+        text-align: center;
+    }
+}

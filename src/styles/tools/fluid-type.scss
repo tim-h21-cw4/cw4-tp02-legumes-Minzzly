@@ -1,0 +1,59 @@
+/* ==========================================================================
+   fluid-type / mixin
+
+   Génère un font-size fluide entre  2 breakpoints.
+   Par défault, il établira sont calcul avec notre breakpoint xs et lg
+   Il besoin de la grandeur minimum et maximum
+
+   Exemple
+   body {
+        @include fluid-type(16px, 20px);
+   }
+   Nous aurons donc:
+    une typo de 16px en 375px et moins;
+    une typo de 20px en 1440px et plus;
+    et fluide entre 375px et 1440px;
+
+
+   ========================================================================== */
+@mixin fluid-type(
+    $min-font-size,
+    $max-font-size,
+    $min-bp: $breakpoint-xs,
+    $max-bp: $breakpoint-lg
+) {
+    $u1: unit($min-bp);
+    $u2: unit($max-bp);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+        & {
+            font-size: $min-font-size;
+
+            @media screen and (min-width: $min-bp) {
+                font-size: calc(
+                    #{$min-font-size} + #{strip-unit(
+                            $max-font-size - $min-font-size
+                        )} *
+                        (
+                            (100vw - #{$min-bp}) / #{strip-unit(
+                                    $max-bp - $min-bp
+                                )}
+                        )
+                );
+            }
+            @media screen and (min-width: $max-bp) {
+                font-size: $max-font-size;
+            }
+        }
+    }
+}
+
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}

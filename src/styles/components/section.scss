@@ -1,0 +1,26 @@
+/* ==========================================================================
+   section / components
+   ========================================================================== */
+
+.section {
+    margin-top: var(--spacing-lg);
+
+    @media screen and (min-width: $breakpoint-md) {
+        margin-top: var(--spacing-xl);
+    }
+}
+
+.section-callout {
+    padding: var(--spacing-lg) 0;
+
+    figcaption {
+        margin-top: 20px;
+    }
+    @media screen and (min-width: $breakpoint-md) {
+        padding: var(--spacing-xl) 0;
+    }
+}
+.section-tertiary {
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-white);
+}

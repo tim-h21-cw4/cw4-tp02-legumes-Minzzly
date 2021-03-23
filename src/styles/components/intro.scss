@@ -1,0 +1,20 @@
+.intro {
+    img {
+        width: 100%;
+        display: block;
+    }
+
+    .card {
+        .col:first-child {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        @media screen and (min-width: $breakpoint-md) {
+            width: 80%;
+            position: relative;
+            margin-top: -100px;
+        }
+    }
+}

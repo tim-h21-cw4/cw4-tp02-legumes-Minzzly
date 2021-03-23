@@ -1,0 +1,117 @@
+/* ==========================================================================
+   card / components
+   ========================================================================== */
+
+.card {
+    position: relative;
+
+    .col + .col {
+        margin-top: var(--spacing-md);
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+        display: flex;
+        .col {
+            width: 45%;
+        }
+        .col + .col {
+            margin-top: 0;
+        }
+    }
+}
+
+.card--secondary {
+    background: var(--color-bg-secondary);
+    color: var(--color-black);
+    padding: var(--spacing-md);
+}
+.card--tertiary {
+    background: var(--color-bg-tertiary);
+    color: var(--color-white);
+    padding: var(--spacing-md);
+}
+.card--quaternary {
+    background: var(--color-bg-quaternary);
+    color: var(--color-white);
+    padding: var(--spacing-md);
+}
+.card--quinary {
+    background: var(--color-bg-quinary);
+    color: var(--color-black);
+    padding: var(--spacing-md);
+}
+
+/*
+   News card
+   ========================================================================== */
+.card-news {
+    position: relative;
+    img {
+        width: 100%;
+        aspect-ratio: 19/11;
+        object-fit: cover;
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+        img {
+            aspect-ratio: 1 / 1;
+        }
+    }
+}
+
+.card-news--large {
+    color: var(--color-white);
+
+    h3 {
+        @include fluid-type(22px, 30px);
+        width: 90%;
+    }
+    .card__content {
+        background: none;
+        position: absolute;
+        top: 0;
+        bottom: unset;
+        width: 100%;
+        padding: var(--spacing-sm);
+    }
+    img {
+        aspect-ratio: 16 /9;
+        object-fit: cover;
+        max-width: none;
+        height: 100%;
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+        img {
+            aspect-ratio: 1 / 1;
+        }
+    }
+}
+
+.card__content {
+    background-color: var(--color-bg-primary);
+    padding: var(--spacing-sm) 0 0 0;
+    @media screen and (min-width: $breakpoint-md) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 80%;
+        padding: var(--spacing-md) var(--spacing-md) 0 0;
+    }
+}
+.card-news--small {
+    @media screen and (min-width: $breakpoint-md) {
+        display: flex;
+        align-items: flex-start;
+        img {
+            aspect-ratio: 1/1;
+            height: 100%;
+        }
+        .card__content {
+            position: relative;
+            width: 100%;
+            padding: 0;
+            padding-left: 30px;
+        }
+    }
+}
