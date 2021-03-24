@@ -33,6 +33,8 @@ $fa-font-path: '../assets/fonts';
 // C’est là que la majorité de notre travail a lieu.
 
 //pour la navigation de swiper vous n'avez pas besoin d'importer le SCSS
+@import '../../node_modules/swiper/swiper.scss';
+@import '../../node_modules/swiper/components/pagination/pagination.scss';
 
 @import 'components/header';
 @import 'components/footer';

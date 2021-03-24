@@ -10,7 +10,9 @@
     "start": "gulp",
     "build": "gulp build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "swiper": "^6.5.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
