@@ -1,5 +1,5 @@
 .has-js {
-    [data-scrolly='fromBottom'] {
+    [data-scrolly='FlipfromBottom'] {
         opacity: 0;
         transition: all 0.8s ease-out;
         transform: rotateX(90deg);
@@ -9,7 +9,7 @@
         }
     }
 
-    [data-scrolly='fromLeft'] {
+    [data-scrolly='FlipfromLeft'] {
         opacity: 0;
         transition: all 0.8s ease-out;
         transform: rotateY(90deg);

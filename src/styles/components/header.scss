@@ -95,6 +95,9 @@ header {
     display: flex;
     z-index: 1;
 
+    transition: all 0.4s $ease-out-sine;
+    transform: translateY(-100%) translateX(200%);
+
     ul {
         width: 100%;
         display: flex;
@@ -103,6 +106,17 @@ header {
         list-style: none;
         padding: 0;
         opacity: 0;
+
+        .nav-is-active & {
+            transform: translateY(0) translateX(0);
+            opacity: 1;
+        }
+
+        @media screen and (min-width: $breakpoint-md) {
+            flex-direction: row;
+            opacity: 1;
+            transform: none;
+        }
 
         a {
             width: 100%;
@@ -132,6 +146,10 @@ header {
             }
         }
     }
+
+    .nav-is-active & {
+        transform: translateY(0);
+    }
 }
 
 .nav-primary__item {
@@ -145,5 +163,11 @@ header {
         font-size: inherit;
         text-transform: none;
         font-weight: 700;
+    }
+}
+
+.nav-is-active {
+    body {
+        overflow: hidden;
     }
 }
