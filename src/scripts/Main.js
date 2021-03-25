@@ -1,7 +1,9 @@
 import ComponentFactory from './ComponentFactory';
 
 class Main {
-  constructor() {}
+  constructor() {
+    this.init();
+  }
 
   init() {
     document.documentElement.classList.add('has-js');

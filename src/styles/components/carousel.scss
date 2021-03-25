@@ -1,0 +1,17 @@
+.gallery {
+    .swiper-options {
+        display: none;
+
+        @media screen and (min-width: $breakpoint-md) {
+            display: flex;
+        }
+    }
+
+    .swiper-pagination {
+        display: block;
+
+        @media screen and (min-width: $breakpoint-md) {
+            display: none;
+        }
+    }
+}

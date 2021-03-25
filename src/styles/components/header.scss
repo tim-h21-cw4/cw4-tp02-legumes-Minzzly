@@ -17,6 +17,9 @@ header {
         justify-content: space-between;
         align-items: center;
     }
+    .header-is-hidden.is-scrolling-down & {
+        transform: translateY(-100%) translateY(4px);
+    }
 }
 .header__toggle {
     --bar-width: 30px;

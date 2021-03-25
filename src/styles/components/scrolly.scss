@@ -1,0 +1,22 @@
+.has-js {
+    [data-scrolly='fromBottom'] {
+        opacity: 0;
+        transition: all 0.8s ease-out;
+        transform: rotateX(90deg);
+        &.is-active {
+            opacity: 1;
+            transform: rotateX(0deg);
+        }
+    }
+
+    [data-scrolly='fromLeft'] {
+        opacity: 0;
+        transition: all 0.8s ease-out;
+        transform: rotateY(90deg);
+
+        &.is-active {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+    }
+}

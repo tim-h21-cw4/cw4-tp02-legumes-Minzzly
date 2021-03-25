@@ -12,7 +12,7 @@
 
     <body>
         <div class="site-container">
-            <header class="header">
+            <header class="header" data-component="Header">
                 <div class="wrapper">
                     <a href="#" class="header__brand">
                         <img src="assets/images/logo.svg" alt="Logo Tomate" />
@@ -33,7 +33,7 @@
                             </li>
                         </ul>
                     </nav>
-                    <button class="header__toggle">
+                    <button class="header__toggle js-toggle">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -45,16 +45,16 @@
                     <img src="assets/images/hero.jpg" alt="Photos de légume" />
                 </div>
                 <div class="hero__content">
-                    <div class="wrapper">
-                        <h1>Pousse pousse pousse<br />Les bons gros légumes</h1>
+                    <div class="wrapper" data-component="Scrolly">
+                        <h1 data-scrolly="fromBottom">Pousse pousse pousse<br />Les bons gros légumes</h1>
                     </div>
                 </div>
             </section>
-            <section class="section intro">
+            <section class="section intro" data-component="Scrolly">
                 <div class="wrapper">
                     <img src="assets/images/intro.jpg" alt="Des épinards" />
                 </div>
-                <div class="wrapper-small">
+                <div class="wrapper-small" data-scrolly="fromBottom">
                     <div class="card card--secondary">
                         <div class="col">
                             <h2>Des beaux légumes pour tout l'monde</h2>
@@ -70,9 +70,9 @@
                     </div>
                 </div>
             </section>
-            <section class="section news">
+            <section class="section news" data-component="Scrolly">
                 <div class="wrapper-small">
-                    <div class="card-news">
+                    <div class="card-news" data-scrolly="fromLeft">
                         <img src="assets/images/news1.jpg" alt="" />
                         <div class="card__content">
                             <h3>Des beaux légumes pour tout l’monde</h3>
@@ -83,7 +83,7 @@
                             <p class="category">Nouvelles - 5 minutes</p>
                         </div>
                     </div>
-                    <div class="card-news">
+                    <div class="card-news" data-scrolly="fromLeft">
                         <img src="assets/images/news2.jpg" alt="" />
                         <div class="card__content">
                             <h3>Des beaux légumes pour tout l’monde</h3>
@@ -94,7 +94,7 @@
                             <p class="category">Nouvelles - 5 minutes</p>
                         </div>
                     </div>
-                    <div class="card-news card-news--large">
+                    <div class="card-news card-news--large" data-scrolly="fromLeft">
                         <img src="assets/images/news3.jpg" alt="" />
                         <div class="card__content">
                             <h3>
@@ -103,7 +103,7 @@
                             </h3>
                         </div>
                     </div>
-                    <div class="card-news card-news--small">
+                    <div class="card-news card-news--small" data-scrolly="fromLeft">
                         <img src="assets/images/news4.jpg" alt="" />
                         <div class="card__content">
                             <h3>Des beaux légumes pour tout l’monde</h3>
@@ -111,7 +111,7 @@
                             <p class="category">Nouvelles - 5 minutes</p>
                         </div>
                     </div>
-                    <div class="card-news card-news--small">
+                    <div class="card-news card-news--small" data-scrolly="fromLeft">
                         <img src="assets/images/news5.jpg" alt="" />
                         <div class="card__content">
                             <h3>Des beaux légumes pour tout l’monde</h3>
@@ -132,7 +132,7 @@
                         beaux légumes pour tout l'monde.
                     </p>
                 </div>
-                <div class="wrapper">
+                <div class="wrapper" data-component="Scrolly">
                     <div class="swiper-options">
                         <button class="button-chevron button-chevron-reverse swiper-button-prev">
                             <img src="assets/images/chevron.svg" alt="" />
@@ -141,7 +141,7 @@
                             <img src="assets/images/chevron.svg" alt="" />
                         </button>
                     </div>
-                    <div class="swiper-container">
+                    <div class="swiper-container" data-component="Carousel" data-scrolly="fromBottom">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide swiper-slide-secondary">
                                 <div class="swiper-slide-content">
@@ -184,8 +184,8 @@
                     </div>
                 </div>
             </section>
-            <section class="section section-callout section-tertiary">
-                <div class="wrapper-small">
+            <section class="section section-callout section-tertiary" data-component="Scrolly">
+                <div class="wrapper-small" data-scrolly="fromLeft">
                     <blockquote class="title-primary">
                         « Miam, miam, miam les beaux gros légumes . Miam, miam, miam j'ai hâte d'en manger »
                     </blockquote>
@@ -200,52 +200,52 @@
                         beaux légumes pour tout l'monde.
                     </p>
                 </div>
-                <div class="wrapper">
-                    <div class="card card--tertiary">
+                <div class="wrapper" data-component="Scrolly">
+                    <div class="card card--tertiary" data-scrolly="fromLeft">
                         <h3>Une belle laitue</h3>
                         <img src="assets/images/lettuce.png" alt="De la laitue" />
                     </div>
-                    <div class="card card--secondary card--long">
+                    <div class="card card--secondary card--long" data-scrolly="fromLeft">
                         <h3>De belles patates</h3>
                         <img src="assets/images/potato.png" alt="Des patates" />
                     </div>
-                    <div class="card card--quaternary">
+                    <div class="card card--quaternary" data-scrolly="fromLeft">
                         <h3>Une belle laitue</h3>
                         <img src="assets/images/lettuce.png" alt="De la laitue" />
                     </div>
-                    <div class="card card--secondary">
+                    <div class="card card--secondary" data-scrolly="fromLeft">
                         <h3>Une beau poivron</h3>
                         <img src="assets/images/pepper.png" alt="Un poivron" />
                     </div>
-                    <div class="card card--quinary">
+                    <div class="card card--quinary" data-scrolly="fromLeft">
                         <h3>Une belle aubergine</h3>
                         <img src="assets/images/eggplant.png" alt="Un aubergine" />
                     </div>
-                    <div class="card card--tertiary card--large">
+                    <div class="card card--tertiary card--large" data-scrolly="fromLeft">
                         <h3>Une belle laitue</h3>
                         <img src="assets/images/lettuce.png" alt="De la laitue" />
                     </div>
-                    <div class="card card--secondary">
+                    <div class="card card--secondary" data-scrolly="fromLeft">
                         <h3>De belles patates</h3>
                         <img src="assets/images/potato.png" alt="Des patates" />
                     </div>
-                    <div class="card card--quinary">
+                    <div class="card card--quinary" data-scrolly="fromLeft">
                         <h3>De belles asperges</h3>
                         <img src="assets/images/asparagus.png" alt="Des asperges" />
                     </div>
-                    <div class="card card--secondary">
+                    <div class="card card--secondary" data-scrolly="fromLeft">
                         <h3>Une beau poivron</h3>
                         <img src="assets/images/pepper.png" alt="Un poivron" />
                     </div>
-                    <div class="card card--quaternary card--long">
+                    <div class="card card--quaternary card--long" data-scrolly="fromLeft">
                         <h3>De belles asperges</h3>
                         <img src="assets/images/asparagus.png" alt="Des asperges" />
                     </div>
-                    <div class="card card--secondary card--large">
+                    <div class="card card--secondary card--large" data-scrolly="fromLeft">
                         <h3>Une belle laitue</h3>
                         <img src="assets/images/lettuce.png" alt="De la laitue" />
                     </div>
-                    <div class="card card--tertiary">
+                    <div class="card card--tertiary" data-scrolly="fromLeft">
                         <h3>Une beau poivron</h3>
                         <img src="assets/images/pepper.png" alt="Un poivron" />
                     </div>
@@ -259,16 +259,21 @@
                         beaux légumes pour tout l'monde.
                     </p>
                 </div>
-                <div class="wrapper">
-                    <div class="swiper-options">
+                <div class="wrapper" data-component="Scrolly">
+                    <!-- <div class="swiper-options">
                         <button class="button-chevron button-chevron-reverse swiper-button-prev">
                             <img src="assets/images/chevron.svg" alt="" />
                         </button>
                         <button class="button-chevron swiper-button-next">
                             <img src="assets/images/chevron.svg" alt="" />
                         </button>
-                    </div>
-                    <div class="swiper-container">
+                    </div> -->
+                    <div
+                        class="swiper-container"
+                        data-component="Carousel"
+                        data-carousel="split"
+                        data-scrolly="fromBottom"
+                    >
                         <div class="swiper-wrapper">
                             <div class="swiper-slide swiper-slide-secondary">
                                 <div class="swiper-slide-content">
@@ -307,12 +312,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-scrollbar"></div>
+                        <!-- <div class="swiper-pagination"></div> -->
                     </div>
                 </div>
             </section>
-            <footer class="footer">
-                <div class="wrapper-small">
+            <footer class="footer" data-component="Scrolly">
+                <div class="wrapper-small" data-scrolly="fromBottom">
                     <div class="footer__brand">
                         <a href="#"><img src="assets/images/logo-revert.svg" alt="Logo Tomate" /></a>
                     </div>

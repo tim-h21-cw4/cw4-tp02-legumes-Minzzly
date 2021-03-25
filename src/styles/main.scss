@@ -35,6 +35,7 @@ $fa-font-path: '../assets/fonts';
 //pour la navigation de swiper vous n'avez pas besoin d'importer le SCSS
 @import '../../node_modules/swiper/swiper.scss';
 @import '../../node_modules/swiper/components/pagination/pagination.scss';
+@import '../../node_modules/swiper/components/scrollbar/scrollbar.scss';
 
 @import 'components/header';
 @import 'components/footer';
@@ -46,6 +47,8 @@ $fa-font-path: '../assets/fonts';
 @import 'components/button';
 @import 'components/gallery';
 @import 'components/wall';
+@import 'components/carousel';
+@import 'components/scrolly';
 
 // UTILITIES
 // Utilitaires et classes auxiliaires avec possibilité de remplacer tout ce qui précède, par exemple masquer les éléments de la page
