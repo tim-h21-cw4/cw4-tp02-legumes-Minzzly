@@ -17,7 +17,7 @@ header {
         justify-content: space-between;
         align-items: center;
     }
-    .header-is-hidden.is-scrolling-down & {
+    .header-is-hidden.is-scrolling-down:not(.nav-is-active) & {
         transform: translateY(-100%) translateY(4px);
     }
 }
@@ -87,19 +87,26 @@ header {
 .nav-primary {
     background-color: var(--color-bg-secondary);
     position: absolute;
-    overflow-y: auto;
-    width: 100%;
-    height: 100vh;
+    overflow: hidden;
     top: 0;
-    left: 0;
+    right: 0;
     display: flex;
     z-index: 1;
 
-    transition: all 0.4s $ease-out-sine;
-    transform: translateY(-100%) translateX(200%);
+    width: 0;
+    height: 0;
+    transition: all 0.8s $ease-out;
+    opacity: 0;
+
+    .nav-is-active & {
+        width: 100%;
+        height: 100vh;
+        opacity: 1;
+    }
 
     ul {
         width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -107,8 +114,12 @@ header {
         padding: 0;
         opacity: 0;
 
+        transition: all 0.4s $ease-out-back 0.8s;
+        transform: translateY(200%);
+
         .nav-is-active & {
-            transform: translateY(0) translateX(0);
+            transition: all 0.4s $ease-out;
+            transform: translateY(0);
             opacity: 1;
         }
 
