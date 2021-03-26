@@ -4,6 +4,7 @@
 
 .card {
     position: relative;
+    cursor: pointer;
 
     .col + .col {
         margin-top: var(--spacing-md);
@@ -46,6 +47,7 @@
    ========================================================================== */
 .card-news {
     position: relative;
+    cursor: pointer;
     img {
         width: 100%;
         aspect-ratio: 19/11;
