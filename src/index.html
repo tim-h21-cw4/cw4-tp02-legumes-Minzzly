@@ -222,6 +222,7 @@
                         data-component="Modal"
                         data-modal-id="tpl-modal-legumes"
                         data-modal-title="Une belle laitue"
+                        data-modal-source="assets/images/lettuce.png"
                     >
                         <h3>Une belle laitue</h3>
                         <img src="assets/images/lettuce.png" alt="De la laitue" />
@@ -231,7 +232,8 @@
                         data-scrolly="FlipfromLeft"
                         data-component="Modal"
                         data-modal-id="tpl-modal-legumes"
-                        data-modal-title="Une belle laitue"
+                        data-modal-title="De belles patates"
+                        data-modal-source="assets/images/potato.png"
                     >
                         <h3>De belles patates</h3>
                         <img src="assets/images/potato.png" alt="Des patates" />
@@ -242,6 +244,7 @@
                         data-component="Modal"
                         data-modal-id="tpl-modal-legumes"
                         data-modal-title="Une belle laitue"
+                        data-modal-source="assets/images/lettuce.png"
                     >
                         <h3>Une belle laitue</h3>
                         <img src="assets/images/lettuce.png" alt="De la laitue" />
@@ -251,9 +254,10 @@
                         data-scrolly="FlipfromLeft"
                         data-component="Modal"
                         data-modal-id="tpl-modal-legumes"
-                        data-modal-title="Une belle laitue"
+                        data-modal-title="Un beau poivron"
+                        data-modal-source="assets/images/pepper.png"
                     >
-                        <h3>Une beau poivron</h3>
+                        <h3>Un beau poivron</h3>
                         <img src="assets/images/pepper.png" alt="Un poivron" />
                     </div>
                     <div
@@ -261,7 +265,8 @@
                         data-scrolly="FlipfromLeft"
                         data-component="Modal"
                         data-modal-id="tpl-modal-legumes"
-                        data-modal-title="Une belle laitue"
+                        data-modal-title="Une belle aubergine"
+                        data-modal-source="assets/images/eggplant.png"
                     >
                         <h3>Une belle aubergine</h3>
                         <img src="assets/images/eggplant.png" alt="Un aubergine" />
@@ -272,6 +277,7 @@
                         data-component="Modal"
                         data-modal-id="tpl-modal-legumes"
                         data-modal-title="Une belle laitue"
+                        data-modal-source="assets/images/lettuce.png"
                     >
                         <h3>Une belle laitue</h3>
                         <img src="assets/images/lettuce.png" alt="De la laitue" />
@@ -281,7 +287,8 @@
                         data-scrolly="FlipfromLeft"
                         data-component="Modal"
                         data-modal-id="tpl-modal-legumes"
-                        data-modal-title="Une belle laitue"
+                        data-modal-title="De belles patates"
+                        data-modal-source="assets/images/potato.png"
                     >
                         <h3>De belles patates</h3>
                         <img src="assets/images/potato.png" alt="Des patates" />
@@ -291,12 +298,20 @@
                         data-scrolly="FlipfromLeft"
                         data-component="Modal"
                         data-modal-id="tpl-modal-legumes"
-                        data-modal-title="Une belle laitue"
+                        data-modal-title="De belles asperges"
+                        data-modal-source="assets/images/asparagus.png"
                     >
                         <h3>De belles asperges</h3>
                         <img src="assets/images/asparagus.png" alt="Des asperges" />
                     </div>
-                    <div class="card card--secondary" data-scrolly="FlipfromLeft">
+                    <div
+                        class="card card--secondary"
+                        data-scrolly="FlipfromLeft"
+                        data-component="Modal"
+                        data-modal-id="tpl-modal-legumes"
+                        data-modal-title="Une beau poivron"
+                        data-modal-source="assets/images/pepper.png"
+                    >
                         <h3>Une beau poivron</h3>
                         <img src="assets/images/pepper.png" alt="Un poivron" />
                     </div>
@@ -305,7 +320,8 @@
                         data-scrolly="FlipfromLeft"
                         data-component="Modal"
                         data-modal-id="tpl-modal-legumes"
-                        data-modal-title="Une belle laitue"
+                        data-modal-title="De belles asperges"
+                        data-modal-source="assets/images/asparagus.png"
                     >
                         <h3>De belles asperges</h3>
                         <img src="assets/images/asparagus.png" alt="Des asperges" />
@@ -316,6 +332,7 @@
                         data-component="Modal"
                         data-modal-id="tpl-modal-legumes"
                         data-modal-title="Une belle laitue"
+                        data-modal-source="assets/images/lettuce.png"
                     >
                         <h3>Une belle laitue</h3>
                         <img src="assets/images/lettuce.png" alt="De la laitue" />
@@ -325,7 +342,8 @@
                         data-scrolly="FlipfromLeft"
                         data-component="Modal"
                         data-modal-id="tpl-modal-legumes"
-                        data-modal-title="Une belle laitue"
+                        data-modal-title="Une beau poivron"
+                        data-modal-source="assets/images/pepper.png"
                     >
                         <h3>Une beau poivron</h3>
                         <img src="assets/images/pepper.png" alt="Un poivron" />
@@ -341,7 +359,9 @@
                     </p>
                 </div>
                 <div class="wrapper" data-component="Scrolly">
-                    <!-- <div class="swiper-options">
+                    <!-- NOTE: Je l'ai mis en commentaire parce que c'est plus simple
+                        
+                        <div class="swiper-options">
                         <button class="button-chevron button-chevron-reverse swiper-button-prev">
                             <img src="assets/images/chevron.svg" alt="" />
                         </button>
@@ -463,10 +483,10 @@
             <template id="tpl-modal-legumes">
                 <div class="modal">
                     <div class="modal_scrim"></div>
-                    <div class="modal_box">
+                    <div class="modal_box" id="contentModal">
                         <div class="modal_content">
                             <h2>{{title}}</h2>
-                            <p>bla bla bla la {{title}}. Bon choix!</p>
+                            <img src="{{source}}" alt="Image d'un legume" />
                         </div>
                         <button class="modal__close js-close"></button>
                     </div>

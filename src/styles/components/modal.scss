@@ -46,6 +46,9 @@
     height: 100%;
     overflow-y: auto;
     padding: var(--modal-padding);
+
+    position: relative;
+    overflow: hidden;
 }
 
 .modal__close {
@@ -98,4 +101,14 @@
 
 .modal-is-active body {
     overflow: hidden;
+}
+
+.modal {
+    img {
+        position: absolute;
+        bottom: -50px;
+        right: -50px;
+        max-height: 80%;
+        max-width: 100%;
+    }
 }

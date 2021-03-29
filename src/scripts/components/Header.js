@@ -15,7 +15,6 @@ export default class Header {
   }
 
   onScroll(event) {
-    console.log('Header engaged');
     this.lastScrollPosition = this.scrollPosition;
     this.scrollPosition = document.scrollingElement.scrollTop;
     this.setHeaderState();
