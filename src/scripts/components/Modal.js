@@ -27,8 +27,7 @@ export default class Modal {
 
   open(event) {
     event.preventDefault();
-    const cible = event.target;
-    this.backgroundModal(cible);
+    this.backgroundModal(this.element);
     this.appendModal();
   }
 
@@ -49,11 +48,6 @@ export default class Modal {
   }
 
   backgroundModal(cible) {
-    console.log(cible.parentElement.nodeName);
-    if (cible.nodeName === 'H3' || cible.nodeName === 'IMG') {
-      cible = cible.parentElement;
-    }
-
     this.couleurBg = window
       .getComputedStyle(cible, null)
       .getPropertyValue('background-color');
