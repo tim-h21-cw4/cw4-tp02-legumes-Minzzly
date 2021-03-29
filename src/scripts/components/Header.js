@@ -2,7 +2,8 @@ export default class Header {
   constructor(element) {
     this.element = element;
     this.scrollPosition = 0;
-    this.scrollLimit = 0.1;
+    this.scrollLimit = this.element.dataset.headerScrollLimit;
+    this.headerHide = this.element.dataset.headerHide;
     this.lastScrollPosition = 0;
     this.html = document.documentElement;
 
@@ -21,12 +22,14 @@ export default class Header {
     this.setDirectionState();
   }
   setHeaderState() {
-    const scrollHeight = document.scrollingElement.scrollHeight;
+    if (this.headerHide == 'true') {
+      const scrollHeight = document.scrollingElement.scrollHeight;
 
-    if (this.scrollPosition > scrollHeight * this.scrollLimit) {
-      this.html.classList.add('header-is-hidden');
-    } else {
-      this.html.classList.remove('header-is-hidden');
+      if (this.scrollPosition > scrollHeight * this.scrollLimit) {
+        this.html.classList.add('header-is-hidden');
+      } else {
+        this.html.classList.remove('header-is-hidden');
+      }
     }
   }
 

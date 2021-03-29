@@ -6,8 +6,14 @@ export default class Carousel {
     /** La configuration par default pour les carousels */
     this.defaultConfig = {
       spaceBetween: 20,
-      slidesPerView: 5,
+      slidesPerView: 2,
       loop: true,
+
+      breakpoints: {
+        768: {
+          slidesPerView: 4,
+        },
+      },
 
       navigation: {
         nextEl: '.swiper-button-next',
@@ -29,15 +35,22 @@ export default class Carousel {
       config = {
         ...this.defaultConfig,
         ...{
-          slidesPerView: 5,
+          breakpoints: {
+            768: {
+              slidesPerView: 2,
+            },
+          },
+        },
+      };
+    }
+
+    if (this.element.dataset.carousel == 'scroll') {
+      config = {
+        ...this.defaultConfig,
+        ...{
           scrollbar: {
             el: '.swiper-scrollbar',
             draggable: true,
-          },
-          breakpoints: {
-            768: {
-              slidesPerView: 5,
-            },
           },
         },
       };
