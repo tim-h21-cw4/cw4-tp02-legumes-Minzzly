@@ -24,7 +24,7 @@ export default class Scrolly {
     }
   }
   watch(entries) {
-    /** methode qui active l'animation des elements et les faits jouer qu'une seule fois */
+    /** méthode qui active l'animation des elements et les faits jouer qu'une seule fois */
     for (let i = 0; i < entries.length; i++) {
       const entry = entries[i];
       const target = entry.target;

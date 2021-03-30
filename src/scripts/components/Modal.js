@@ -34,7 +34,7 @@ export default class Modal {
 
   open(event) {
     event.preventDefault();
-    /** appelle deux méthode: une pour changer la couleur de background pour les modals qui ont l'images et le titre et une pour afficher ces modals */
+    /** appelle deux méthode: une pour changer la couleur de background pour les modals qui ont l'image et le titre et une pour afficher ces modals */
     this.backgroundModal(this.element);
     this.appendModal();
   }
