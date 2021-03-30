@@ -5,21 +5,24 @@ export default class Carousel {
     this.element = element;
     /** La configuration par default pour les carousels */
     this.defaultConfig = {
-      spaceBetween: 20,
-      slidesPerView: 2,
-      loop: true,
+      spaceBetween: 20 /** espacement entre les swiper-slides */,
+      slidesPerView: 2 /** slides per view dans la version mobile */,
+      loop: true /** pour looper les caroussels */,
 
+      /** breakpoint pour quand la fenetre arrive à minimum 768px (donc version desktop) */
       breakpoints: {
         768: {
-          slidesPerView: 4,
+          slidesPerView: 4 /** slides per view pour la version desktop */,
         },
       },
 
+      /** activer la navigation */
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
 
+      /** activer la pagination */
       pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
@@ -33,8 +36,9 @@ export default class Carousel {
 
     if (this.element.dataset.carousel == 'split') {
       config = {
-        ...this.defaultConfig,
+        ...this.defaultConfig /** viens chercher le defaultConfig */,
         ...{
+          /** modification du breakpoint pour que lesslides per view sois à 2 au lieu de 4 */
           breakpoints: {
             768: {
               slidesPerView: 2,
@@ -46,8 +50,9 @@ export default class Carousel {
 
     if (this.element.dataset.carousel == 'scroll') {
       config = {
-        ...this.defaultConfig,
+        ...this.defaultConfig /** viens chercher le defaultConfig */,
         ...{
+          /** ajout de scrollbar dans le carousel*/
           scrollbar: {
             el: '.swiper-scrollbar',
             draggable: true,
@@ -56,6 +61,7 @@ export default class Carousel {
       };
     }
 
+    /** appelle la class Swiper avec les parametres */
     new Swiper(this.element, config);
   }
 }
